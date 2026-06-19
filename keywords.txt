@@ -1,0 +1,71 @@
+#######################################
+# Syntax Coloring Map — InsightBasicStudio
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+InsightBasicStudio	KEYWORD1
+ExperimentRegistry	KEYWORD1
+Experiment	KEYWORD1
+PinDef	KEYWORD1
+PayloadField	KEYWORD1
+PayloadVal	KEYWORD1
+FieldKey	KEYWORD1
+ValType	KEYWORD1
+PayloadProvider	KEYWORD1
+CommandHandler	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+initExperiment	KEYWORD2
+printExperimentPins	KEYWORD2
+registerPayload	KEYWORD2
+registerCommandHandler	KEYWORD2
+update	KEYWORD2
+send	KEYWORD2
+add	KEYWORD2
+isPinReserved	KEYWORD2
+D	KEYWORD2
+I	KEYWORD2
+B	KEYWORD2
+C	KEYWORD2
+S	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+DHT_EXPT	LITERAL1
+LDR_EXPT	LITERAL1
+POT_EXPT	LITERAL1
+BTN_EXPT	LITERAL1
+US_EXPT	LITERAL1
+RGB_EXPT	LITERAL1
+BUZ_EXPT	LITERAL1
+RING_EXPT	LITERAL1
+HRT_EXPT	LITERAL1
+TLIGHT_EXPT	LITERAL1
+BAR_EXPT	LITERAL1
+EXPERIMENT_COUNT	LITERAL1
+DHT_SIG	LITERAL1
+LDR_SIG	LITERAL1
+POT_SIG	LITERAL1
+BTN_AH	LITERAL1
+BTN_AL	LITERAL1
+US_TRIG	LITERAL1
+US_ECHO	LITERAL1
+RGB_R	LITERAL1
+RGB_G	LITERAL1
+RGB_B	LITERAL1
+BUZZER	LITERAL1
+SR_DATA	LITERAL1
+SR_CLK	LITERAL1
+SR_LATCH	LITERAL1
+HEART	LITERAL1
+VAL_FLOAT	LITERAL1
+VAL_INT	LITERAL1
+VAL_BOOL	LITERAL1
+VAL_CHAR	LITERAL1
+VAL_STR	LITERAL1
