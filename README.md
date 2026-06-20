@@ -1,6 +1,6 @@
 # InsightBasicStudio
 
-A unified Arduino library for the **Insight Basic Experimental Board** that merges experiment management ([InsightBasicLabs](https://github.com/Erictronics/InsightBasicLabs)) with UART telemetry and dashboard command dispatch ([InsightBasicBoard](https://github.com/Erictronics/InsightBasicBoard)) into a single API.
+A unified Arduino library for the **Insight Basic Experimental Board** that merges experiment management ([InsightBasicLabs](https://github.com/ppi-repo/insightbasiclabs)) with UART telemetry and dashboard command dispatch ([InsightBasicBoard](https://github.com/ppi-repo/insightbasic)) into a single API.
 
 One `#include`, one global instance, one `begin()` call.
 
@@ -82,8 +82,8 @@ InsightBasicStudio composes both libraries and delegates to each. The `studio` g
 ### Arduino IDE (ZIP)
 
 1. Install the dependencies first:
-   - Download [InsightBasicLabs](https://github.com/Erictronics/InsightBasicLabs) as ZIP and install via **Sketch > Include Library > Add .ZIP Library...**
-   - Download [InsightBasicBoard](https://github.com/Erictronics/InsightBasicBoard) as ZIP and install the same way.
+   - Download [InsightBasicLabs](https://github.com/ppi-repo/insightbasiclabs) as ZIP and install via **Sketch > Include Library > Add .ZIP Library...**
+   - Download [InsightBasicBoard](https://github.com/ppi-repo/insightbasic) as ZIP and install the same way.
 2. Download this repository as ZIP and install via the same menu.
 3. Examples appear under **File > Examples > InsightBasicStudio**.
 
@@ -126,9 +126,9 @@ platform = atmelavr
 board = uno
 framework = arduino
 lib_deps =
-    https://github.com/Erictronics/InsightBasicStudio.git
-    https://github.com/Erictronics/InsightBasicLabs.git
-    https://github.com/Erictronics/InsightBasicBoard.git
+    https://github.com/ppi-repo/insightbasicstudio.git
+    https://github.com/ppi-repo/insightbasiclabs.git
+    https://github.com/ppi-repo/insightbasic.git
     adafruit/DHT sensor library
     adafruit/Adafruit Unified Sensor
 ```
@@ -197,7 +197,7 @@ bool initExperiment(std::initializer_list<Experiment> experiments);
 bool initExperiment(const ExperimentRegistry& registry);
 ```
 
-Initialises experiments with automatic pin conflict detection. Returns `false` (without changing any pin) if a conflict is found. See [InsightBasicLabs README](https://github.com/Erictronics/InsightBasicLabs) for full details.
+Initialises experiments with automatic pin conflict detection. Returns `false` (without changing any pin) if a conflict is found. See [InsightBasicLabs README](https://github.com/ppi-repo/insightbasiclabs) for full details.
 
 ---
 
@@ -238,6 +238,16 @@ Register a callback for `KEY:VALUE` commands from the web dashboard. System comm
 ```cpp
 void onCommand(const char* key, const char* value);
 ```
+
+---
+
+### `studio.enableSerialLogging()`
+
+```cpp
+void enableSerialLogging();
+```
+
+Enables mirroring of transmitted JSON packets to the hardware Serial (USB) port for debugging. Initializes `Serial` at the same baud rate used in `begin()`. Call once in `setup()` after `begin()`.
 
 ---
 
@@ -465,8 +475,8 @@ InsightBasicBoard reserves **D4** (TX) and **D5** (RX) for SoftwareSerial commun
 
 | Library | Required by | Source |
 |---------|------------|--------|
-| [InsightBasicLabs](https://github.com/Erictronics/InsightBasicLabs) | All sketches | GitHub |
-| [InsightBasicBoard](https://github.com/Erictronics/InsightBasicBoard) | All sketches | GitHub |
+| [InsightBasicLabs](https://github.com/ppi-repo/insightbasiclabs) | All sketches | GitHub |
+| [InsightBasicBoard](https://github.com/ppi-repo/insightbasic) | All sketches | GitHub |
 | [Adafruit DHT sensor library](https://github.com/adafruit/DHT-sensor-library) | DHT22 sketches | Arduino Library Manager |
 | [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor) | Transitive dep of DHT | Arduino Library Manager |
 

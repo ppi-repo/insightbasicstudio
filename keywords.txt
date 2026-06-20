@@ -26,6 +26,7 @@ registerPayload	KEYWORD2
 registerCommandHandler	KEYWORD2
 update	KEYWORD2
 send	KEYWORD2
+enableSerialLogging	KEYWORD2
 add	KEYWORD2
 isPinReserved	KEYWORD2
 D	KEYWORD2

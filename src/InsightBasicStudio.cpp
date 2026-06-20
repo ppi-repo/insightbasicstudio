@@ -25,6 +25,10 @@ void InsightBasicStudio::registerCommandHandler(CommandHandler handler) {
     _comms.registerCommandHandler(handler);
 }
 
+void InsightBasicStudio::enableSerialLogging() {
+    _comms.enableSerialLogging();
+}
+
 void InsightBasicStudio::send(const PayloadField* fields, uint8_t count, const char* cmd) {
     _comms.send(fields, count, cmd);
 }

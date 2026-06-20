@@ -15,6 +15,7 @@ public:
     // ── Telemetry & commands (InsightBasicBoard) ───────────────────────────
     void registerPayload(PayloadProvider provider, uint32_t intervalMs = 0);
     void registerCommandHandler(CommandHandler handler);
+    void enableSerialLogging();
     void send(const PayloadField* fields, uint8_t count, const char* cmd = "DATA");
     void update();
 
